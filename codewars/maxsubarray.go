@@ -1,5 +1,6 @@
 package codewars
 
+// Caddan's Classic Algorythm
 func MaxSequence(arr []int) int {
 	maxSoFar, maxEndingHere := 0, 0
 	for _, v := range arr {
