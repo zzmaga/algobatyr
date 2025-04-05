@@ -2,43 +2,18 @@ package main
 
 import (
 	"fmt"
-	"strconv"
-	"strings"
+	t "gobook/codewars"
 )
 
-func HumanReadableTime(seconds int) string {
-	minutes, hours := 0, 0
-	var mer string
-	for seconds >= 60 {
-		if seconds >= 60 {
-			minutes = seconds / 60
-			seconds = seconds % 60
-		}
-		if minutes >= 60 {
-			hours = minutes / 60
-			minutes %= 60
-		}
-	}
-	mer = strconv.Itoa(hours) + ":" + strconv.Itoa(minutes) + ":" + strconv.Itoa(seconds)
-	result := strings.Split(mer, ":")
-	for i, r := range result {
-		okey, _ := strconv.Atoi(r)
-		if okey < 10 {
-			result[i] = "0" + result[i]
-		}
-	}
-	return strings.Join(result, ":")
-}
-
 func main() {
-	fmt.Println(HumanReadableTime(0))
-	fmt.Println(HumanReadableTime(59))
-	fmt.Println(HumanReadableTime(60))
-	fmt.Println(HumanReadableTime(90))
-	fmt.Println(HumanReadableTime(3599))
-	fmt.Println(HumanReadableTime(3600))
-	fmt.Println(HumanReadableTime(45296))
-	fmt.Println(HumanReadableTime(86399))
-	fmt.Println(HumanReadableTime(86400))
-	fmt.Println(HumanReadableTime(359999))
+	fmt.Println(t.FirstNonRepeating("a"))
+	fmt.Println(t.FirstNonRepeating("stress"))
+	fmt.Println(t.FirstNonRepeating("moonmen"))
+	fmt.Println(t.FirstNonRepeating(""))
+	fmt.Println(t.FirstNonRepeating("abba"))
+	fmt.Println(t.FirstNonRepeating("aa"))
+	fmt.Println(t.FirstNonRepeating("~><#~><"))
+	fmt.Println(t.FirstNonRepeating("sTreSS"))
+	fmt.Println(t.FirstNonRepeating("hello world, eh?"))
+	fmt.Println(t.FirstNonRepeating("Go hang a salami, I'm a lasagna hog!"))
 }

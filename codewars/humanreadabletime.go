@@ -1,7 +1,6 @@
 package codewars
 
 import (
-	"fmt"
 	"strconv"
 	"strings"
 )
@@ -58,16 +57,3 @@ func HumanReadableTime(seconds int) string {
   return hour + ":" + min + ":" + sec
 }
 */
-
-func main() {
-	fmt.Println(HumanReadableTime(0))
-	fmt.Println(HumanReadableTime(59))
-	fmt.Println(HumanReadableTime(60))
-	fmt.Println(HumanReadableTime(90))
-	fmt.Println(HumanReadableTime(3599))
-	fmt.Println(HumanReadableTime(3600))
-	fmt.Println(HumanReadableTime(45296))
-	fmt.Println(HumanReadableTime(86399))
-	fmt.Println(HumanReadableTime(86400))
-	fmt.Println(HumanReadableTime(359999))
-}
